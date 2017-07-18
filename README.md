@@ -7,7 +7,7 @@ Describe the effect each of the P, I, D components had in your implementation.
 
 In this Project I implemented a PID-Controller to control the lateral dynamics of the vehicle.
 
-The P-gain is a factor which is multiplicated with the acutal Cross-Track Error. If the P-Gain is small the controller reacts very slowly. If it's big the controller reacts fast and it might overshoot. To tune this parameter the velocity should be kept constant and you should try several P-Gain Parameters. If the oscillation is constant in it's amplitude, we found the critical P-Gain. Every Factor above the critical P-Gain results in instability. In order to have a good P-Gain choose the parameter 10 till 20 percent smaller than the critical P-Gain.
+The P-gain is a factor which is multiplicated with the actual Cross-Track Error. If the P-Gain is small the controller reacts very slowly. If it's big the controller reacts fast and it might overshoot. To tune this parameter the velocity should be kept constant and you should try several P-Gain Parameters. If the oscillation is constant in it's amplitude, we found the critical P-Gain. Every Factor above the critical P-Gain results in instability. In order to have a good P-Gain choose the parameter 10 till 20 percent smaller than the critical P-Gain.
 
 The I-gain is a parameter which is multiplicated with the Integral-Error. The Integral-Error behaves like a batch or storage which stores all values from the past added with the actual CTE-value. If the sum of the Integral-Error is zero, the I-Controller is deactivated, otherwise it's activated. If the I-gain is too small the car tend to drift for longer times. It takes too long to eliminate the CTE!
 
