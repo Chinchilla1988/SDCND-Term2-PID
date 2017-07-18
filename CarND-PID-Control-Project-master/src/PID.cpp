@@ -31,7 +31,7 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
 
 void PID::UpdateError(double cte) {
 
-    i_error+=cte;
+    i_error=i_error*0.9+cte;
     d_error=cte-p_error;
     p_error=cte;
 

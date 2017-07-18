@@ -35,7 +35,7 @@ int main()
   PID pid;
   // TODO: Initialize the pid variable.
   double Kp = 0.2;
-  double Ki = 0.000000;
+  double Ki = 0.000003;
   double Kd = 5;//4.3;
   double steering_prev;
   // forgetting factor
