@@ -1,7 +1,7 @@
 # SDCND-Term2-PID
 Project PID Controller
 
-Videolink: https://www.youtube.com/watch?v=Ti7SBQzHvSA&feature=youtu.be
+[Check me out](https://www.youtube.com/watch?v=Ti7SBQzHvSA&feature=youtu.be)
 
 Describe the effect each of the P, I, D components had in your implementation.
 
