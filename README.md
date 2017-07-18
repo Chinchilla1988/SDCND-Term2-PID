@@ -7,8 +7,18 @@ In this Project I implemented a PID-Controller to control the lateral dynamics o
 
 The P-gain is a factor which is multiplicated with the acutal Cross-Track Error. If the P-Gain is small the controller reacts very slowly. If it's big the controller reacts fast and it might overshoot. To tune this parameter the velocity should be kept constant and you should try several P-Gain Parameters. If the oscillation is constant in it's amplitude, we found the critical P-Gain. Every Factor above the critical P-Gain results in instability. In order to have a good P-Gain choose the parameter 10 till 20 percent smaller than the critical P-Gain.
 
-The I-gain is a parameter which is multiplicated with the Integral-Error. The Integral-Error behaves like a batch or storage. 
+The I-gain is a parameter which is multiplicated with the Integral-Error. The Integral-Error behaves like a batch or storage which stores all values from the past added with the actual CTE-value. If the sum of the Integral-Error is zero, the I-Controller is deactivated, otherwise it's activated. If the I-gain is too small the car tend to drift for longer times. It takes too long to eliminate the CTE!
 
+The D-gain is a parameter which is multiplicated with the Derivative-Error / Difference between past and actual CTE. If the Difference is not zero the Controller is activated, else it's set to zero. The bigger the D-gain the faster the controller reacts. If the D-gain is too big it might lead to a constant steering angle. If its too small it might overshoot. The D-controller is not diminishing the CTE but the derivative of the CTE. It helps to converge smoothly and fast to the desired position.
+
+Parameter-Tuning:
+
+To tweak the parameteres I started with a simple P-Controller. After I found my P-gain, I implemented the D-Gain. In the end I tried to implement the I-gain. While driving at high velocity the car started oscillating, because the increase of the velocity is influencing vehicle dynamics. So I decided to neglect the I-gain and implemented a PD-Controller.
+
+The final parameters are: 
+      P -> 0.2
+      I -> 0
+      D -> 5
 
 CarND-Controls-PID
 
